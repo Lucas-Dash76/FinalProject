@@ -20,6 +20,8 @@ public abstract class User {
 
     public abstract void displayDashboard();
 
+    public abstract boolean searchItems(String keyword);
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -39,6 +41,30 @@ public abstract class User {
                 ", id=" + id +
                 ", gender=" + gender +
                 '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public enum Gender {
